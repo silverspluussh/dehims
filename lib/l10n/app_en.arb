@@ -1,15 +1,9 @@
 {
     "language":"English",
-    "@language":{
-      "description": "The current Language"
-    },
-    "welcome":"WELCOME To Dehims",
-     "@welcome":{
-        "description": "A Welcome message to Dehims"
-    },
+    "hello":"Welcome To DeHims",
     "login":"Login",
     "username":"Username",
-    "cannotBlank":"field Cannot Be Blank Please",
+    "cannotBlank":"Field Cannot Be Blank Please",
     "password":"Password",
     "db":"Database",
     "addPatient":"Add Patient",

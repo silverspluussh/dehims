@@ -8,15 +8,18 @@ environment:
   sdk: '>=2.18.5 <3.0.0'
 
 dependencies:
-  country_list_pick: ^1.0.1+6
-  cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
-  flutter_localization: ^0.1.10
+
+  country_list_pick: ^1.0.1+6
+  cupertino_icons: ^1.0.2
   google_fonts: ^3.0.1
   provider: ^6.0.5
   shared_preferences: ^2.0.15
   velocity_x: ^3.6.0
+  flutter_localizations:
+    sdk: flutter
+  intl: any
 
 dev_dependencies:
   flutter_lints: ^2.0.0
@@ -29,12 +32,11 @@ flutter:
 
   assets:
     - assets/
+    - lib/l10n/
 
   fonts:
     - family: Poppins
       fonts:
         - asset: assets/Poppins-Regular.ttf
 
-flutter_intl:
-  main_locale: en_US
-  enabled: true
+
