@@ -1,14 +1,18 @@
 #DeHims refactored
 
-Dehims is a comprehensive Hospital Management System built with Flutter, a popular cross-platform mobile application development framework. It is designed to support English, French, and Spanish languages to cater to diverse patient populations and healthcare professionals.
+Dehims is a cross-platform Hospital Management System that can be used on both Windows and Mac computers. Although the system is optimized for desktop use, mobile versions of the application will also be available to provide users with the flexibility to access the system from anywhere.
 
-With Dehims, hospital administrators can easily manage patient records, appointments, and medical histories. The system also allows for efficient management of hospital staff schedules, inventory, and other resources.
+The desktop version of Dehims provides a comprehensive set of features and an intuitive user interface that makes it easy for hospital administrators to manage patient records, appointments, and medical histories. It also offers advanced features such as real-time analytics and reporting capabilities, inventory management, and staff scheduling tools.
 
-Dehims provides real-time analytics and reporting capabilities, enabling administrators to monitor hospital performance and make informed decisions. The system also supports seamless communication between patients, staff, and stakeholders who speak different languages.
+While the desktop version is ideal for managing large volumes of data and complex hospital operations, the mobile versions of Dehims are optimized for use on-the-go. With the mobile app, hospital staff can easily access patient records, schedule appointments, and view important hospital metrics from their smartphones or tablets.
 
-Built with Flutter, Dehims offers a modern and user-friendly interface, ensuring a seamless user experience across all platforms. Its cross-platform capabilities also allow for easy deployment on both iOS and Android devices.
+The mobile versions of Dehims are designed to offer the same level of functionality and user experience as the desktop version, ensuring that users can manage hospital operations efficiently, even when they are away from their desks.
 
-Overall, Dehims is a robust Hospital Management System that simplifies hospital operations, improves patient outcomes, and supports multilingual communication, making it a valuable tool for healthcare facilities that serve diverse communities.
+Overall, Dehims is a versatile Hospital Management System that provides hospital administrators with a range of tools and features to optimize their operations. Its cross-platform capabilities make it easy to access from multiple devices, providing users with the flexibility they need to manage their hospital efficiently.
+
+
+
+
 
 
 
