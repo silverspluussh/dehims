@@ -1,4 +1,4 @@
-## DeHims refactored
+# DeHims refactored
 
 Dehims is a cross-platform Hospital Management System that can be used on both Windows and Mac computers. Although the system is optimized for desktop use, mobile versions of the application will also be available to provide users with the flexibility to access the system from anywhere.
 
@@ -11,8 +11,8 @@ The mobile versions of Dehims are designed to offer the same level of functional
 Overall, Dehims is a versatile Hospital Management System that provides hospital administrators with a range of tools and features to optimize their operations. Its cross-platform capabilities make it easy to access from multiple devices, providing users with the flexibility they need to manage their hospital efficiently.
 
 ## Authors: 
-# DaaTech Ghana
-# Silverware
+### DaaTech Ghana
+### Silverware
 
 
 
