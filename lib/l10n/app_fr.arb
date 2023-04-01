@@ -1,6 +1,6 @@
  {
-    "language":"french",
-    "welcome":"BIENVENUE À DeHims",
+    "language":"French",
+    "hello":"Bienvenue À DeHims",
     "login":"Connexion",
     "username":"Nom d'utilisateur",
     "cannotBlank":"Le champ ne peut pas être vide, s'il vous plaît",

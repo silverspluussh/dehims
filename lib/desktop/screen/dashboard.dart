@@ -2,11 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hopsysadmin/custom/constants.dart';
 import 'package:hopsysadmin/custom/responsiveness.dart';
+import 'package:hopsysadmin/desktop/provider/locale.dart';
 import 'package:hopsysadmin/desktop/provider/menuprovider.dart';
 import 'package:hopsysadmin/desktop/provider/themeprovider.dart';
 import 'package:hopsysadmin/desktop/screen/opdvitals.dart';
 import 'package:hopsysadmin/desktop/screen/patient.dart';
+import 'package:hopsysadmin/l10n/l10n.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_gen/gen_l10n/app_localization.dart';
 
 import 'home.dart';
 
@@ -77,6 +80,8 @@ class _DashboardState extends State<Dashboard> {
   }
 
   SizedBox _appbar(BuildContext context) {
+    final lprovider = Provider.of<LanguageProvider>(context, listen: false);
+    final locale = lprovider.locale ?? const Locale('en');
     return SizedBox(
       height: 100,
       width: MediaQuery.of(context).size.width,
@@ -101,6 +106,30 @@ class _DashboardState extends State<Dashboard> {
               color: Color.fromARGB(255, 150, 148, 148),
             ),
           ),
+          const SizedBox(width: 20),
+          DropdownButtonHideUnderline(
+              child: DropdownButton(
+            value: locale,
+            icon: Container(width: 15),
+            items: L10n.all.map((e) {
+              var langflag = L10n.getflag(e.languageCode);
+              return DropdownMenuItem(
+                value: e,
+                child: Center(
+                  child: Text(
+                    langflag,
+                    style: GoogleFonts.poppins(
+                        color: const Color.fromARGB(255, 8, 8, 8)),
+                  ),
+                ),
+                onTap: () {
+                  Provider.of<LanguageProvider>(context, listen: false)
+                      .setlocalizations(e);
+                },
+              );
+            }).toList(),
+            onChanged: (_) {},
+          )),
           const SizedBox(width: 10)
         ],
       ),
@@ -120,7 +149,7 @@ class _DashboardState extends State<Dashboard> {
             const Icon(Icons.add, color: Colors.white),
             const SizedBox(width: 10),
             Text(
-              'Add patient',
+              AppLocalizations.of(context)?.addPatient ?? 'Add patient',
               style: GoogleFonts.poppins(color: Colors.white),
             )
           ],
@@ -174,6 +203,9 @@ class _DashboardState extends State<Dashboard> {
 
 //sidemenuwidget
   _sidemenu(BuildContext context) {
+    final locale = Localizations.localeOf(context);
+    final flag = L10n.getflag(locale.languageCode);
+
     return Container(
       width: MediaQuery.of(context).size.width * 0.21,
       height: MediaQuery.of(context).size.height - 100,
@@ -795,6 +827,13 @@ class _DashboardState extends State<Dashboard> {
                             ),
                           ]),
                       const SizedBox(height: 40),
+                      ListTile(
+                        title: Text('Language', style: GoogleFonts.poppins()),
+                        trailing: Text(flag,
+                            style: GoogleFonts.poppins(fontSize: 15)),
+                      ),
+                      const SizedBox(height: 20),
+
                       Consumer<Themeswitch>(
                           builder: ((context, value, child) => SwitchListTile(
                               title: Text('System Theme',

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hopsysadmin/custom/constants.dart';
 import 'package:hopsysadmin/desktop/screen/dashboard.dart';
+import 'package:flutter_gen/gen_l10n/app_localization.dart';
 
 class Desktop extends StatefulWidget {
   const Desktop({super.key});
@@ -32,7 +33,9 @@ class _DesktopState extends State<Desktop> {
                   _pageiconAsset(image: 'assets/startpageicon.png'),
                   const SizedBox(height: 30),
                   _pagetextwidget(
-                      text: 'WELCOME TO DeHims', color: Colors.white),
+                      text: AppLocalizations.of(context)?.hello ??
+                          'WELCOME TO dims',
+                      color: Colors.white),
                   const SizedBox(height: 50),
                   _buttonwidget(context)
                 ],

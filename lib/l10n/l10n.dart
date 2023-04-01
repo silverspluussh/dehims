@@ -6,4 +6,17 @@ class L10n {
     const Locale('es'),
     const Locale('fr'),
   ];
+
+  static String getflag(String flag) {
+    switch (flag) {
+      case 'en':
+        return '🇺🇸';
+      case 'es':
+        return '🇪🇸';
+      case 'fr':
+        return '🇫🇷';
+      default:
+        return '🇺🇸';
+    }
+  }
 }

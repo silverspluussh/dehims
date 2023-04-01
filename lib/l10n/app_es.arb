@@ -1,6 +1,6 @@
 {
     "language":"Espanol",
-    "welcome": "Bienvenido A DeHims",
+    "hello": "Bienvenido A DeHims",
     "login": "Iniciar sesión",
     "username": "Nombre de usuario",
     "cannotBlank": "El campo no puede estar vacío",
