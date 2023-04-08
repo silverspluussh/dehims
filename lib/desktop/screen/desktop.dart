@@ -79,7 +79,7 @@ class _DesktopState extends State<Desktop> {
                         const SizedBox(height: 30),
                         _pagetextwidget(
                             text: AppLocalizations.of(context)?.hello ??
-                                'WELCOME TO dims',
+                                'Welcome TO DeHims',
                             color: Colors.white),
                         const SizedBox(height: 50),
                         _buttonwidget(context)
@@ -257,11 +257,7 @@ class _DesktopState extends State<Desktop> {
   }
 
   Text _pagetextwidget({required String text, required Color color}) {
-    return Text(
-      text,
-      style: GoogleFonts.poppins(
-          color: color, fontSize: 18, fontWeight: FontWeight.w500),
-    );
+    return Text(text, style: Theme.of(context).textTheme.displayMedium);
   }
 
   Image _pageiconAsset({required String image}) => Image.asset(image);

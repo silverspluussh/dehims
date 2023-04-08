@@ -10,6 +10,7 @@ import 'package:hopsysadmin/desktop/screen/patient.dart';
 import 'package:hopsysadmin/l10n/l10n.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_gen/gen_l10n/app_localization.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 import 'home.dart';
 
@@ -138,11 +139,12 @@ class _DashboardState extends State<Dashboard> {
 
   InkWell _addpatientbtn() {
     return InkWell(
-      child: Container(
-        width: MediaQuery.of(context).size.width * 0.13,
-        height: 40,
-        decoration: BoxDecoration(
-            color: kPrimaryColor, borderRadius: BorderRadius.circular(30)),
+      child: Card(
+        color: kPrimaryColor,
+        margin: const EdgeInsets.all(3),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(30),
+        ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -153,7 +155,7 @@ class _DashboardState extends State<Dashboard> {
               style: GoogleFonts.poppins(color: Colors.white),
             )
           ],
-        ),
+        ).p8(),
       ),
     );
   }
